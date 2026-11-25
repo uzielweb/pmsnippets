@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" method="upgrade">
+    <name>COM_PMSNIPPETS</name>
+    <author>Ponto Mega</author>
+    <creationDate>2026-11</creationDate>
+    <copyright>(C) 2026 Ponto Mega. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>contato@pontomega.com.br</authorEmail>
+    <authorUrl>https://pontomega.com.br</authorUrl>
+    <version>1.0.0</version>
+    <description>COM_PMSNIPPETS_XML_DESCRIPTION</description>
+    <namespace path="src">PontoMega\Component\Pmsnippets</namespace>
+
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <files folder="site">
+        <folder>src</folder>
+        <folder>tmpl</folder>
+    </files>
+
+    <languages folder="site/language">
+        <language tag="pt-BR">pt-BR/com_pmsnippets.ini</language>
+        <language tag="en-GB">en-GB/com_pmsnippets.ini</language>
+    </languages>
+
+    <media destination="com_pmsnippets" folder="media">
+        <filename>joomla.asset.json</filename>
+        <folder>css</folder>
+        <folder>js</folder>
+    </media>
+
+    <administration>
+        <menu img="class:code">COM_PMSNIPPETS</menu>
+        <submenu>
+            <menu link="option=com_pmsnippets&amp;view=snippets" view="snippets" img="class:code" alt="COM_PMSNIPPETS_SUBMENU_SNIPPETS">COM_PMSNIPPETS_SUBMENU_SNIPPETS</menu>
+            <menu link="option=com_categories&amp;extension=com_pmsnippets" view="categories" img="class:folder" alt="COM_PMSNIPPETS_SUBMENU_CATEGORIES">COM_PMSNIPPETS_SUBMENU_CATEGORIES</menu>
+        </submenu>
+        <files folder="admin">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <folder>forms</folder>
+            <folder>services</folder>
+            <folder>sql</folder>
+            <folder>src</folder>
+            <folder>tmpl</folder>
+        </files>
+        <languages folder="admin/language">
+            <language tag="pt-BR">pt-BR/com_pmsnippets.ini</language>
+            <language tag="pt-BR">pt-BR/com_pmsnippets.sys.ini</language>
+            <language tag="en-GB">en-GB/com_pmsnippets.ini</language>
+            <language tag="en-GB">en-GB/com_pmsnippets.sys.ini</language>
+        </languages>
+    </administration>
+</extension>

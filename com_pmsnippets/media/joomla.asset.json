@@ -1,0 +1,37 @@
+{
+    "$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
+    "name": "com_pmsnippets",
+    "version": "1.0.2",
+    "description": "Ponto Mega Snippets Web Assets",
+    "license": "GPL-2.0-or-later",
+    "assets": [
+        {
+            "name": "com_pmsnippets.site",
+            "type": "style",
+            "uri": "com_pmsnippets/site.css",
+            "version": "1.0.2"
+        },
+        {
+            "name": "com_pmsnippets.highlighter",
+            "type": "script",
+            "uri": "com_pmsnippets/highlighter.js",
+            "version": "1.0.2",
+            "attributes": {
+                "defer": true
+            }
+        },
+        {
+            "name": "com_pmsnippets.app",
+            "type": "script",
+            "uri": "com_pmsnippets/app.js",
+            "version": "1.0.2",
+            "dependencies": [
+                "core",
+                "com_pmsnippets.highlighter"
+            ],
+            "attributes": {
+                "defer": true
+            }
+        }
+    ]
+}

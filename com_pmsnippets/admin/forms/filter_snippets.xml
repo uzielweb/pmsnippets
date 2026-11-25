@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+        <field
+            name="search"
+            type="text"
+            label="COM_PMSNIPPETS_FILTER_SEARCH_LABEL"
+            hint="JSEARCH_FILTER"
+        />
+        <field
+            name="state"
+            type="status"
+            label="JOPTION_SELECT_PUBLISHED"
+            onchange="this.form.submit();"
+        >
+            <option value="">JOPTION_SELECT_PUBLISHED</option>
+        </field>
+        <field
+            name="category_id"
+            type="category"
+            extension="com_pmsnippets"
+            label="JCATEGORY"
+            layout="joomla.form.field.list-fancy-select"
+            onchange="this.form.submit();"
+        >
+            <option value="">JOPTION_SELECT_CATEGORY</option>
+        </field>
+        <field
+            name="version_code"
+            type="list"
+            label="COM_PMSNIPPETS_FILTER_VERSION_LABEL"
+            layout="joomla.form.field.list-fancy-select"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_PMSNIPPETS_FILTER_SELECT_VERSION</option>
+            <option value="j6">COM_PMSNIPPETS_VERSION_J6</option>
+            <option value="j5">COM_PMSNIPPETS_VERSION_J5</option>
+            <option value="j4">COM_PMSNIPPETS_VERSION_J4</option>
+            <option value="j3">COM_PMSNIPPETS_VERSION_J3</option>
+        </field>
+        <field
+            name="code_language"
+            type="list"
+            label="COM_PMSNIPPETS_FIELD_CODE_LANGUAGE_LABEL"
+            layout="joomla.form.field.list-fancy-select"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_PMSNIPPETS_FILTER_SELECT_CODE_LANG</option>
+            <option value="php">COM_PMSNIPPETS_LANG_PHP</option>
+            <option value="javascript">COM_PMSNIPPETS_LANG_JAVASCRIPT</option>
+            <option value="css">COM_PMSNIPPETS_LANG_CSS</option>
+            <option value="xml">COM_PMSNIPPETS_LANG_XML</option>
+            <option value="sql">COM_PMSNIPPETS_LANG_SQL</option>
+            <option value="htaccess">COM_PMSNIPPETS_LANG_HTACCESS</option>
+            <option value="json">COM_PMSNIPPETS_LANG_JSON</option>
+            <option value="bash">COM_PMSNIPPETS_LANG_BASH</option>
+        </field>
+        <field
+            name="context_type"
+            type="list"
+            label="COM_PMSNIPPETS_FIELD_CONTEXT_LABEL"
+            layout="joomla.form.field.list-fancy-select"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_PMSNIPPETS_FILTER_SELECT_CONTEXT</option>
+            <option value="override">COM_PMSNIPPETS_CONTEXT_OVERRIDE</option>
+            <option value="template">COM_PMSNIPPETS_CONTEXT_TEMPLATE</option>
+            <option value="module">COM_PMSNIPPETS_CONTEXT_MODULE</option>
+            <option value="plugin">COM_PMSNIPPETS_CONTEXT_PLUGIN</option>
+            <option value="component">COM_PMSNIPPETS_CONTEXT_COMPONENT</option>
+            <option value="helper">COM_PMSNIPPETS_CONTEXT_HELPER</option>
+            <option value="cli">COM_PMSNIPPETS_CONTEXT_CLI</option>
+            <option value="database">COM_PMSNIPPETS_CONTEXT_DATABASE</option>
+        </field>
+        <field
+            name="language"
+            type="contentlanguage"
+            label="JFIELD_LANGUAGE_LABEL"
+            layout="joomla.form.field.list-fancy-select"
+            onchange="this.form.submit();"
+        >
+            <option value="">JOPTION_SELECT_LANGUAGE</option>
+            <option value="*">JALL</option>
+        </field>
+    </fields>
+
+    <fields name="list">
+        <field
+            name="fullordering"
+            type="list"
+            label="JGLOBAL_SORT_BY"
+            default="a.ordering ASC"
+            onchange="this.form.submit();"
+        >
+            <option value="">JGLOBAL_SORT_BY</option>
+            <option value="a.ordering ASC">JGRID_HEADING_ORDERING_ASC</option>
+            <option value="a.ordering DESC">JGRID_HEADING_ORDERING_DESC</option>
+            <option value="a.title ASC">JGLOBAL_TITLE_ASC</option>
+            <option value="a.title DESC">JGLOBAL_TITLE_DESC</option>
+            <option value="a.copies_count DESC">COM_PMSNIPPETS_SORT_COPIES_DESC</option>
+            <option value="a.hits DESC">JGLOBAL_HITS_DESC</option>
+            <option value="a.id DESC">JGRID_HEADING_ID_DESC</option>
+        </field>
+        <field
+            name="limit"
+            type="limitbox"
+            label="JGLOBAL_LIST_LIMIT"
+            default="25"
+            onchange="this.form.submit();"
+        />
+    </fields>
+</form>

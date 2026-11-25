@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <fieldset name="display" label="COM_PMSNIPPETS_CONFIG_DISPLAY_LABEL" description="COM_PMSNIPPETS_CONFIG_DISPLAY_DESC">
+        <field
+            name="items_per_page"
+            type="number"
+            label="COM_PMSNIPPETS_CONFIG_ITEMS_PER_PAGE_LABEL"
+            description="COM_PMSNIPPETS_CONFIG_ITEMS_PER_PAGE_DESC"
+            default="12"
+            min="3"
+            max="60"
+        />
+        <field
+            name="default_sort"
+            type="list"
+            label="COM_PMSNIPPETS_CONFIG_DEFAULT_SORT_LABEL"
+            description="COM_PMSNIPPETS_CONFIG_DEFAULT_SORT_DESC"
+            default="featured"
+        >
+            <option value="featured">COM_PMSNIPPETS_SORT_FEATURED</option>
+            <option value="copies">COM_PMSNIPPETS_SORT_COPIES</option>
+            <option value="hits">COM_PMSNIPPETS_SORT_HITS</option>
+            <option value="recent">COM_PMSNIPPETS_SORT_RECENT</option>
+            <option value="alpha">COM_PMSNIPPETS_SORT_ALPHA</option>
+        </field>
+        <field
+            name="enable_copy_counter"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            label="COM_PMSNIPPETS_CONFIG_ENABLE_COPY_COUNTER_LABEL"
+            description="COM_PMSNIPPETS_CONFIG_ENABLE_COPY_COUNTER_DESC"
+            default="1"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field
+            name="enable_useful_vote"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            label="COM_PMSNIPPETS_CONFIG_ENABLE_USEFUL_VOTE_LABEL"
+            description="COM_PMSNIPPETS_CONFIG_ENABLE_USEFUL_VOTE_DESC"
+            default="1"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field
+            name="enable_related"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            label="COM_PMSNIPPETS_CONFIG_ENABLE_RELATED_LABEL"
+            description="COM_PMSNIPPETS_CONFIG_ENABLE_RELATED_DESC"
+            default="1"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field
+            name="enable_schema_jsonld"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            label="COM_PMSNIPPETS_CONFIG_ENABLE_SCHEMA_LABEL"
+            description="COM_PMSNIPPETS_CONFIG_ENABLE_SCHEMA_DESC"
+            default="1"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+    </fieldset>
+
+    <fieldset name="permissions" label="JCONFIG_PERMISSIONS_LABEL" description="JCONFIG_PERMISSIONS_DESC">
+        <field
+            name="rules"
+            type="rules"
+            label="JCONFIG_PERMISSIONS_LABEL"
+            filter="rules"
+            validate="rules"
+            component="com_pmsnippets"
+            section="component"
+        />
+    </fieldset>
+</config>

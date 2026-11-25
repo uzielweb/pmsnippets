@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <field
+        name="label"
+        type="text"
+        label="COM_PMSNIPPETS_BLOCK_LABEL"
+        description="COM_PMSNIPPETS_BLOCK_LABEL_DESC"
+        required="true"
+    />
+    <field
+        name="version_tag"
+        type="list"
+        label="COM_PMSNIPPETS_BLOCK_VERSION_LABEL"
+        default="j5,j6"
+        layout="joomla.form.field.list-fancy-select"
+    >
+        <option value="j5,j6">COM_PMSNIPPETS_VERSION_J5_J6</option>
+        <option value="j6">COM_PMSNIPPETS_VERSION_J6</option>
+        <option value="j5">COM_PMSNIPPETS_VERSION_J5</option>
+        <option value="j4,j5,j6">COM_PMSNIPPETS_VERSION_J4_J6</option>
+        <option value="j4">COM_PMSNIPPETS_VERSION_J4</option>
+        <option value="j3">COM_PMSNIPPETS_VERSION_J3</option>
+    </field>
+    <field
+        name="code_language"
+        type="list"
+        label="COM_PMSNIPPETS_FIELD_CODE_LANGUAGE_LABEL"
+        default="php"
+        layout="joomla.form.field.list-fancy-select"
+    >
+        <option value="php">COM_PMSNIPPETS_LANG_PHP</option>
+        <option value="javascript">COM_PMSNIPPETS_LANG_JAVASCRIPT</option>
+        <option value="css">COM_PMSNIPPETS_LANG_CSS</option>
+        <option value="xml">COM_PMSNIPPETS_LANG_XML</option>
+        <option value="sql">COM_PMSNIPPETS_LANG_SQL</option>
+        <option value="htaccess">COM_PMSNIPPETS_LANG_HTACCESS</option>
+        <option value="json">COM_PMSNIPPETS_LANG_JSON</option>
+        <option value="bash">COM_PMSNIPPETS_LANG_BASH</option>
+    </field>
+    <field
+        name="filename_hint"
+        type="text"
+        label="COM_PMSNIPPETS_BLOCK_FILENAME_LABEL"
+        description="COM_PMSNIPPETS_BLOCK_FILENAME_DESC"
+    />
+    <field
+        name="code"
+        type="textarea"
+        label="COM_PMSNIPPETS_BLOCK_CODE_LABEL"
+        rows="12"
+        filter="raw"
+        class="font-monospace w-100"
+        required="true"
+    />
+    <field
+        name="notes"
+        type="textarea"
+        label="COM_PMSNIPPETS_BLOCK_NOTES_LABEL"
+        rows="2"
+    />
+</form>

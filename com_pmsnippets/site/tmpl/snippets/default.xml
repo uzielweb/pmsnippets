@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_PMSNIPPETS_MENU_SNIPPETS_TITLE" option="COM_PMSNIPPETS_MENU_SNIPPETS_TITLE">
+        <message><![CDATA[COM_PMSNIPPETS_MENU_SNIPPETS_DESC]]></message>
+    </layout>
+    <fields name="params">
+        <fieldset name="basic" label="JOPTIONS">
+            <field
+                name="catid"
+                type="category"
+                extension="com_pmsnippets"
+                label="COM_PMSNIPPETS_MENU_CATID_LABEL"
+                description="COM_PMSNIPPETS_MENU_CATID_DESC"
+                layout="joomla.form.field.list-fancy-select"
+            >
+                <option value="0">JALL</option>
+            </field>
+            <field
+                name="items_per_page"
+                type="number"
+                label="COM_PMSNIPPETS_CONFIG_ITEMS_PER_PAGE_LABEL"
+                default="12"
+                min="3"
+                max="60"
+            />
+        </fieldset>
+    </fields>
+</metadata>

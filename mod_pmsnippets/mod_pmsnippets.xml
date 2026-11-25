@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" client="site" method="upgrade">
+    <name>MOD_PMSNIPPETS</name>
+    <author>Ponto Mega</author>
+    <creationDate>2026-11</creationDate>
+    <copyright>(C) 2026 Ponto Mega. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>contato@pontomega.com.br</authorEmail>
+    <authorUrl>https://pontomega.com.br</authorUrl>
+    <version>1.0.0</version>
+    <description>MOD_PMSNIPPETS_XML_DESCRIPTION</description>
+    <namespace path="src">PontoMega\Module\Pmsnippets</namespace>
+
+    <files>
+        <folder module="mod_pmsnippets">services</folder>
+        <folder>src</folder>
+        <folder>tmpl</folder>
+    </files>
+
+    <languages folder="language">
+        <language tag="pt-BR">pt-BR/mod_pmsnippets.ini</language>
+        <language tag="pt-BR">pt-BR/mod_pmsnippets.sys.ini</language>
+        <language tag="en-GB">en-GB/mod_pmsnippets.ini</language>
+        <language tag="en-GB">en-GB/mod_pmsnippets.sys.ini</language>
+    </languages>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                    name="mode"
+                    type="list"
+                    label="MOD_PMSNIPPETS_FIELD_MODE_LABEL"
+                    description="MOD_PMSNIPPETS_FIELD_MODE_DESC"
+                    default="featured"
+                >
+                    <option value="featured">MOD_PMSNIPPETS_MODE_FEATURED</option>
+                    <option value="copies">MOD_PMSNIPPETS_MODE_COPIES</option>
+                    <option value="hits">MOD_PMSNIPPETS_MODE_HITS</option>
+                    <option value="recent">MOD_PMSNIPPETS_MODE_RECENT</option>
+                </field>
+                <field
+                    name="count"
+                    type="number"
+                    label="MOD_PMSNIPPETS_FIELD_COUNT_LABEL"
+                    default="4"
+                    min="1"
+                    max="12"
+                />
+                <field
+                    name="catid"
+                    type="category"
+                    extension="com_pmsnippets"
+                    label="JCATEGORY"
+                    layout="joomla.form.field.list-fancy-select"
+                >
+                    <option value="0">JALL</option>
+                </field>
+                <field
+                    name="show_search"
+                    type="radio"
+                    layout="joomla.form.field.radio.switcher"
+                    label="MOD_PMSNIPPETS_FIELD_SHOW_SEARCH_LABEL"
+                    default="1"
+                >
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field
+                    name="show_stats"
+                    type="radio"
+                    layout="joomla.form.field.radio.switcher"
+                    label="MOD_PMSNIPPETS_FIELD_SHOW_STATS_LABEL"
+                    default="1"
+                >
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field
+                    name="show_categories"
+                    type="radio"
+                    layout="joomla.form.field.radio.switcher"
+                    label="MOD_PMSNIPPETS_FIELD_SHOW_CATEGORIES_LABEL"
+                    default="1"
+                >
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+            <fieldset name="advanced">
+                <field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" class="form-select" validate="moduleLayout" />
+                <field name="moduleclass_sfx" type="textarea" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" rows="2" validate="CssIdentifier" />
+                <field name="cache" type="list" label="COM_MODULES_FIELD_CACHING_LABEL" default="1">
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="details" label="COM_PMSNIPPETS_TAB_GENERAL">
+        <field name="id" type="number" label="JGLOBAL_FIELD_ID_LABEL" default="0" readonly="true" class="readonly" />
+        <field name="title" type="text" label="JGLOBAL_TITLE" required="true" />
+        <field name="alias" type="text" label="JFIELD_ALIAS_LABEL" hint="JFIELD_ALIAS_PLACEHOLDER" />
+        <field
+            name="catid"
+            type="categoryedit"
+            extension="com_pmsnippets"
+            label="JCATEGORY"
+            required="true"
+            layout="joomla.form.field.list-fancy-select"
+        />
+        <field
+            name="summary"
+            type="textarea"
+            label="COM_PMSNIPPETS_FIELD_SUMMARY_LABEL"
+            description="COM_PMSNIPPETS_FIELD_SUMMARY_DESC"
+            rows="3"
+            maxlength="500"
+            required="true"
+        />
+        <field
+            name="description"
+            type="editor"
+            label="COM_PMSNIPPETS_FIELD_DESCRIPTION_LABEL"
+            description="COM_PMSNIPPETS_FIELD_DESCRIPTION_DESC"
+            buttons="true"
+            filter="Joomla\CMS\Component\ComponentHelper::filterText"
+        />
+        <field
+            name="code_language"
+            type="list"
+            label="COM_PMSNIPPETS_FIELD_CODE_LANGUAGE_LABEL"
+            default="php"
+            layout="joomla.form.field.list-fancy-select"
+        >
+            <option value="php">COM_PMSNIPPETS_LANG_PHP</option>
+            <option value="javascript">COM_PMSNIPPETS_LANG_JAVASCRIPT</option>
+            <option value="css">COM_PMSNIPPETS_LANG_CSS</option>
+            <option value="xml">COM_PMSNIPPETS_LANG_XML</option>
+            <option value="sql">COM_PMSNIPPETS_LANG_SQL</option>
+            <option value="htaccess">COM_PMSNIPPETS_LANG_HTACCESS</option>
+            <option value="json">COM_PMSNIPPETS_LANG_JSON</option>
+            <option value="bash">COM_PMSNIPPETS_LANG_BASH</option>
+        </field>
+        <field
+            name="context_type"
+            type="list"
+            label="COM_PMSNIPPETS_FIELD_CONTEXT_LABEL"
+            default="override"
+            layout="joomla.form.field.list-fancy-select"
+        >
+            <option value="override">COM_PMSNIPPETS_CONTEXT_OVERRIDE</option>
+            <option value="template">COM_PMSNIPPETS_CONTEXT_TEMPLATE</option>
+            <option value="module">COM_PMSNIPPETS_CONTEXT_MODULE</option>
+            <option value="plugin">COM_PMSNIPPETS_CONTEXT_PLUGIN</option>
+            <option value="component">COM_PMSNIPPETS_CONTEXT_COMPONENT</option>
+            <option value="helper">COM_PMSNIPPETS_CONTEXT_HELPER</option>
+            <option value="cli">COM_PMSNIPPETS_CONTEXT_CLI</option>
+            <option value="database">COM_PMSNIPPETS_CONTEXT_DATABASE</option>
+        </field>
+        <field
+            name="difficulty"
+            type="list"
+            label="COM_PMSNIPPETS_FIELD_DIFFICULTY_LABEL"
+            default="intermediate"
+            layout="joomla.form.field.list-fancy-select"
+        >
+            <option value="basic">COM_PMSNIPPETS_DIFFICULTY_BASIC</option>
+            <option value="intermediate">COM_PMSNIPPETS_DIFFICULTY_INTERMEDIATE</option>
+            <option value="advanced">COM_PMSNIPPETS_DIFFICULTY_ADVANCED</option>
+        </field>
+        <field
+            name="tags"
+            type="tag"
+            label="JTAG"
+            multiple="true"
+            custom="allow"
+        />
+        <field
+            name="source_url"
+            type="url"
+            label="COM_PMSNIPPETS_FIELD_SOURCE_URL_LABEL"
+            description="COM_PMSNIPPETS_FIELD_SOURCE_URL_DESC"
+            scheme="http,https"
+        />
+        <field name="state" type="list" label="JSTATUS" default="1" class="form-select-color-state">
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+            <option value="2">JARCHIVED</option>
+            <option value="-2">JTRASHED</option>
+        </field>
+        <field name="featured" type="radio" layout="joomla.form.field.radio.switcher" label="JFEATURED" default="0">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="access" type="accesslevel" label="JFIELD_ACCESS_LABEL" default="1" />
+        <field name="language" type="contentlanguage" label="JFIELD_LANGUAGE_LABEL" default="*">
+            <option value="*">JALL</option>
+        </field>
+    </fieldset>
+
+    <fieldset name="codeblocks" label="COM_PMSNIPPETS_TAB_CODE_BLOCKS">
+        <field
+            name="code_blocks"
+            type="subform"
+            label="COM_PMSNIPPETS_FIELD_CODE_BLOCKS_LABEL"
+            description="COM_PMSNIPPETS_FIELD_CODE_BLOCKS_DESC"
+            formsource="administrator/components/com_pmsnippets/forms/subform_codeblock.xml"
+            multiple="true"
+            min="1"
+            buttons="add,remove,move"
+        />
+    </fieldset>
+
+    <fieldset name="publishing" label="COM_PMSNIPPETS_TAB_PUBLISHING">
+        <field name="metadesc" type="textarea" label="JFIELD_META_DESCRIPTION_LABEL" rows="3" />
+        <field name="metakey" type="textarea" label="JFIELD_META_KEYWORDS_LABEL" rows="2" />
+        <field name="created" type="calendar" label="JGLOBAL_FIELD_CREATED_LABEL" translateformat="true" showtime="true" filter="user_utc" />
+        <field name="created_by" type="user" label="JGLOBAL_FIELD_CREATED_BY_LABEL" />
+        <field name="publish_up" type="calendar" label="JGLOBAL_FIELD_PUBLISH_UP_LABEL" translateformat="true" showtime="true" filter="user_utc" />
+        <field name="publish_down" type="calendar" label="JGLOBAL_FIELD_PUBLISH_DOWN_LABEL" translateformat="true" showtime="true" filter="user_utc" />
+        <field name="hits" type="number" label="JGLOBAL_HITS" readonly="true" class="readonly" />
+        <field name="copies_count" type="number" label="COM_PMSNIPPETS_FIELD_COPIES_LABEL" readonly="true" class="readonly" />
+        <field name="useful_count" type="number" label="COM_PMSNIPPETS_FIELD_USEFUL_LABEL" readonly="true" class="readonly" />
+    </fieldset>
+</form>

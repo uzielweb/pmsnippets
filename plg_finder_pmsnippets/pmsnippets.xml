@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="finder" method="upgrade">
+    <name>PLG_FINDER_PMSNIPPETS</name>
+    <author>Ponto Mega</author>
+    <creationDate>2026-11</creationDate>
+    <copyright>(C) 2026 Ponto Mega. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>contato@pontomega.com.br</authorEmail>
+    <authorUrl>https://pontomega.com.br</authorUrl>
+    <version>1.0.0</version>
+    <description>PLG_FINDER_PMSNIPPETS_XML_DESCRIPTION</description>
+    <namespace path="src">PontoMega\Plugin\Finder\Pmsnippets</namespace>
+    <files>
+        <folder plugin="pmsnippets">services</folder>
+        <folder>src</folder>
+    </files>
+    <languages folder="language">
+        <language tag="pt-BR">pt-BR/plg_finder_pmsnippets.ini</language>
+        <language tag="pt-BR">pt-BR/plg_finder_pmsnippets.sys.ini</language>
+        <language tag="en-GB">en-GB/plg_finder_pmsnippets.ini</language>
+        <language tag="en-GB">en-GB/plg_finder_pmsnippets.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                    name="taxonomies"
+                    type="checkboxes"
+                    label="PLG_FINDER_PMSNIPPETS_TAXONOMIES_LABEL"
+                    description="PLG_FINDER_PMSNIPPETS_TAXONOMIES_DESC"
+                    default="type,category,version,code_language,context,language"
+                >
+                    <option value="type">PLG_FINDER_PMSNIPPETS_TAX_TYPE</option>
+                    <option value="category">PLG_FINDER_PMSNIPPETS_TAX_CATEGORY</option>
+                    <option value="version">PLG_FINDER_PMSNIPPETS_TAX_VERSION</option>
+                    <option value="code_language">PLG_FINDER_PMSNIPPETS_TAX_CODE_LANG</option>
+                    <option value="context">PLG_FINDER_PMSNIPPETS_TAX_CONTEXT</option>
+                    <option value="language">PLG_FINDER_PMSNIPPETS_TAX_LANGUAGE</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
