@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelogs>
+    <changelog>
+        <element>pkg_pmsnippets</element>
+        <type>package</type>
+        <version>1.0.0</version>
+        <addition>
+            <item>Initial stable release for Joomla! 5 and Joomla! 6 with full en-GB and pt-BR language packs.</item>
+            <item>Native DI/MVC component (com_pmsnippets) with ID-less SEF routing, FULLTEXT and raw code AJAX search, faceted filters, versioned code tabs, one-click copy, file download, useful votes, multilingual associations, and Schema.org SoftwareSourceCode JSON-LD.</item>
+            <item>Local zero-CDN matte syntax highlighter supporting 8 languages (PHP, Bash, JavaScript, SQL, htaccess, XML, JSON, CSS).</item>
+            <item>Interactive showcase module (mod_pmsnippets) with home, grid, and compact layouts.</item>
+            <item>Smart Search plugin (plg_finder_pmsnippets) indexing 6 taxonomies and Content shortcode plugin (plg_content_pmsnippets).</item>
+            <item>Configured native GitHub-hosted Joomla Update Server (updates.xml) and Changelog XML (changelog.xml).</item>
+        </addition>
+    </changelog>
+</changelogs>

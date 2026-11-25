@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<updates>
+    <update>
+        <name>Ponto Mega Snippets Suite</name>
+        <description>Native code snippet library for Joomla! 5 and 6 (component, showcase module, Smart Search indexer, and content shortcode plugin).</description>
+        <element>pkg_pmsnippets</element>
+        <type>package</type>
+        <client>site</client>
+        <version>1.0.0</version>
+        <infourl title="Ponto Mega Snippets v1.0.0">https://github.com/uzielweb/pmsnippets/releases/tag/v1.0.0</infourl>
+        <downloads>
+            <downloadurl type="full" format="zip">https://github.com/uzielweb/pmsnippets/releases/download/v1.0.0/pkg_pmsnippets_v1.0.0.zip</downloadurl>
+        </downloads>
+        <tags>
+            <tag>stable</tag>
+        </tags>
+        <changelogurl>https://raw.githubusercontent.com/uzielweb/pmsnippets/main/changelog.xml</changelogurl>
+        <maintainer>Uziel Almeida Oliveira (Ponto Mega)</maintainer>
+        <maintainerurl>https://github.com/uzielweb/pmsnippets</maintainerurl>
+        <section>Updates</section>
+        <targetplatform name="joomla" version="((5\.[0-9]+)|(6\.[0-9]+))"/>
+        <php_minimum>8.1</php_minimum>
+    </update>
+</updates>

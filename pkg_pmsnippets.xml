@@ -2,18 +2,22 @@
 <extension type="package" method="upgrade">
     <name>Ponto Mega Snippets Suite</name>
     <packagename>pmsnippets</packagename>
-    <author>Ponto Mega</author>
+    <author>Uziel Almeida Oliveira (Ponto Mega)</author>
     <creationDate>2026-11</creationDate>
     <copyright>(C) 2026 Ponto Mega. All rights reserved.</copyright>
     <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
     <authorEmail>contato@pontomega.com.br</authorEmail>
-    <authorUrl>https://pontomega.com.br</authorUrl>
+    <authorUrl>https://github.com/uzielweb/pmsnippets</authorUrl>
     <version>1.0.0</version>
-    <description>Pacote completo Ponto Mega Snippets para Joomla! 5 e 6: componente, módulo vitrine, Smart Search e Content shortcode.</description>
+    <description>Complete Ponto Mega Snippets suite for Joomla! 5 and 6: native MVC code library component, showcase module, Smart Search indexer, and content shortcode plugin.</description>
     <files folder="packages">
         <file type="component" id="com_pmsnippets">com_pmsnippets.zip</file>
         <file type="module" id="mod_pmsnippets" client="site">mod_pmsnippets.zip</file>
         <file type="plugin" id="pmsnippets" group="finder">plg_finder_pmsnippets.zip</file>
         <file type="plugin" id="pmsnippets" group="content">plg_content_pmsnippets.zip</file>
     </files>
+    <changelogurl>https://raw.githubusercontent.com/uzielweb/pmsnippets/main/changelog.xml</changelogurl>
+    <updateservers>
+        <server type="extension" priority="1" name="Ponto Mega Snippets">https://raw.githubusercontent.com/uzielweb/pmsnippets/main/updates.xml</server>
+    </updateservers>
 </extension>
